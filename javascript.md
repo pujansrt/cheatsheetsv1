@@ -47,3 +47,38 @@ jQuery(element).on('click', _.debounce(sendMail, 300, {
   'trailing': false
 }));
 ```
+
+## Map and Set
+
+```javascript
+var map = new Map();
+map.set('a',true); map.set('b',true); map.set('c',false); map.set('d',true);
+console.log(map); // Map(4){"a" => true, "b" => true, "c" => false, "d" => true}
+
+map.forEach( (value,key) => { });//Iteration
+
+Array.from(map.keys()); // ['a',b','c','d'] //Map to Array
+
+//Set
+var set = new Set();
+set.add(1);set.add(2);set.add(1);
+let o = {'a':1}
+set.add(o);
+
+console.log(set.has(2));//true
+console.log(set.size);//3
+console.log(set); // {1,2,Object{'a':1}}
+
+set.delete(o); // set = {1,2}
+
+//Array to Set
+let mySet2 = new Set([1, 2, 2, 3, 4]); // mySet2 = {1,2,3,4}
+
+//Set to Array
+let arr = [...mySet2]; // [1,2,3,4]
+//OR
+Array.from(setSet2);// [1,2,3,4]
+
+mySet2.forEach((value) => { }); //Iteration
+
+```
